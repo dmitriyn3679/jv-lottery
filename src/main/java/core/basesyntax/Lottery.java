@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Lottery {
-    final int maxNumber = 100;
+    private int maxNumber = 100;
 
     public Ball getRandomBall() {
         Random random = new Random();
@@ -13,5 +13,13 @@ public class Lottery {
         int ballNumber = random.nextInt(maxNumber);
 
         return new Ball(ballColor, ballNumber);
+    }
+
+    public int getMaxNumber() {
+        return maxNumber;
+    }
+
+    public void setMaxNumber(int maxNumber) {
+        this.maxNumber = maxNumber;
     }
 }
